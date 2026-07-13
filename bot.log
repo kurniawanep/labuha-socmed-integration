@@ -1,0 +1,276 @@
+2026-07-13 14:29:28,983 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:29:28,983 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:29:30,395 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:29:31,297 [root INFO] - ⚡ Successfully connected to WhatsApp!
+2026-07-13 14:29:37,028 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:29:37,028 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:29:38,146 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:29:38,374 [whatsmeow.Client WARNING] - Received stream end frame
+2026-07-13 14:29:38,374 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:29:38,545 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: EOF
+2026-07-13 14:29:38,711 [root INFO] - ⚡ Successfully connected to WhatsApp!
+2026-07-13 14:32:50,180 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:32:50,181 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:32:52,194 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:32:53,119 [root INFO] - ⚡ Successfully connected to WhatsApp!
+2026-07-13 14:32:53,669 [supabase_uploader INFO] - Initialized Supabase client targeting bucket: 'disseminator-media'
+2026-07-13 14:32:53,669 [media_processor INFO] - Processing image for Story API compatibility: downloads\chat_3AB876D2173E028D4CF3.jpg
+2026-07-13 14:32:53,679 [media_processor INFO] - Resizing/Padding from (681x1034) to target 9:16 (681x1210)
+2026-07-13 14:32:53,703 [media_processor INFO] - Processed image saved to: downloads\processed_chat_3AB876D2173E028D4CF3.jpg
+2026-07-13 14:32:53,704 [supabase_uploader INFO] - Uploading file 'downloads\processed_chat_3AB876D2173E028D4CF3.jpg' to remote path 'stories/20260713_143253_processed_chat_3AB876D2173E028D4CF3.jpg' (Type: image/jpeg)...
+2026-07-13 14:32:54,731 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/stories/20260713_143253_processed_chat_3AB876D2173E028D4CF3.jpg "HTTP/2 200 OK"
+2026-07-13 14:32:54,734 [supabase_uploader INFO] - Successfully uploaded: stories/20260713_143253_processed_chat_3AB876D2173E028D4CF3.jpg
+2026-07-13 14:32:54,734 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/stories/20260713_143253_processed_chat_3AB876D2173E028D4CF3.jpg
+2026-07-13 14:32:54,735 [supabase_uploader INFO] - Uploading file 'downloads\chat_3AB876D2173E028D4CF3.jpg' to remote path 'originals/20260713_143253_chat_3AB876D2173E028D4CF3.jpg' (Type: image/jpeg)...
+2026-07-13 14:32:55,030 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/originals/20260713_143253_chat_3AB876D2173E028D4CF3.jpg "HTTP/2 200 OK"
+2026-07-13 14:32:55,030 [supabase_uploader INFO] - Successfully uploaded: originals/20260713_143253_chat_3AB876D2173E028D4CF3.jpg
+2026-07-13 14:32:55,030 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/originals/20260713_143253_chat_3AB876D2173E028D4CF3.jpg
+2026-07-13 14:32:55,031 [root INFO] - Deleted local file: downloads\processed_chat_3AB876D2173E028D4CF3.jpg
+2026-07-13 14:32:55,031 [root INFO] - Deleted local file: downloads\chat_3AB876D2173E028D4CF3.jpg
+2026-07-13 14:32:55,033 [meta_publisher INFO] - Initiating Instagram Story publication...
+2026-07-13 14:33:01,517 [meta_publisher INFO] - Created IG Story container: 18111281942291837. Waiting for processing...
+2026-07-13 14:33:01,518 [meta_publisher INFO] - Checking container 18111281942291837 status (attempt 1/15)...
+2026-07-13 14:33:02,453 [meta_publisher INFO] - Container 18111281942291837 status: IN_PROGRESS
+2026-07-13 14:33:07,454 [meta_publisher INFO] - Checking container 18111281942291837 status (attempt 2/15)...
+2026-07-13 14:33:08,215 [meta_publisher INFO] - Container 18111281942291837 status: FINISHED
+2026-07-13 14:33:11,264 [meta_publisher INFO] - Successfully published IG Story. Post ID: 18332504695268679
+2026-07-13 14:33:11,268 [meta_publisher INFO] - Initiating Facebook Page Story publication...
+2026-07-13 14:33:19,002 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:33:19,002 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:33:19,938 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:33:20,196 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:33:20,339 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: EOF
+2026-07-13 14:33:20,577 [root INFO] - ⚡ Successfully connected to WhatsApp!
+2026-07-13 14:33:21,997 [meta_publisher INFO] - Successfully published Facebook Page Photo Story. Story ID: 1688342645621789
+2026-07-13 14:33:22,004 [meta_publisher INFO] - Initiating Threads publication...
+2026-07-13 14:33:25,047 [meta_publisher INFO] - Created Threads container: 18140058664524520. Waiting for processing...
+2026-07-13 14:33:25,048 [meta_publisher INFO] - Checking container 18140058664524520 status (attempt 1/15)...
+2026-07-13 14:33:25,536 [meta_publisher INFO] - Container 18140058664524520 status: IN_PROGRESS
+2026-07-13 14:33:30,537 [meta_publisher INFO] - Checking container 18140058664524520 status (attempt 2/15)...
+2026-07-13 14:33:31,012 [meta_publisher INFO] - Container 18140058664524520 status: FINISHED
+2026-07-13 14:33:32,788 [meta_publisher INFO] - Successfully published to Threads. Post ID: 18030673721648983
+2026-07-13 14:33:33,384 [root INFO] - 📊 Monitoring log saved → Irsyad (6281266419227)
+2026-07-13 14:37:21,042 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:37:21,043 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:37:21,992 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:37:22,565 [root INFO] - ⚡ Successfully connected to WhatsApp!
+2026-07-13 14:37:23,086 [supabase_uploader INFO] - Initialized Supabase client targeting bucket: 'disseminator-media'
+2026-07-13 14:37:23,087 [media_processor INFO] - Processing image for Story API compatibility: downloads\chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg
+2026-07-13 14:37:23,096 [media_processor INFO] - Resizing/Padding from (681x1034) to target 9:16 (681x1210)
+2026-07-13 14:37:23,117 [media_processor INFO] - Processed image saved to: downloads\processed_chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg
+2026-07-13 14:37:23,118 [supabase_uploader INFO] - Uploading file 'downloads\processed_chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg' to remote path 'stories/20260713_143723_processed_chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg' (Type: image/jpeg)...
+2026-07-13 14:37:24,552 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/stories/20260713_143723_processed_chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg "HTTP/2 200 OK"
+2026-07-13 14:37:24,554 [supabase_uploader INFO] - Successfully uploaded: stories/20260713_143723_processed_chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg
+2026-07-13 14:37:24,554 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/stories/20260713_143723_processed_chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg
+2026-07-13 14:37:24,554 [supabase_uploader INFO] - Uploading file 'downloads\chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg' to remote path 'originals/20260713_143723_chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg' (Type: image/jpeg)...
+2026-07-13 14:37:24,883 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/originals/20260713_143723_chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg "HTTP/2 200 OK"
+2026-07-13 14:37:24,885 [supabase_uploader INFO] - Successfully uploaded: originals/20260713_143723_chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg
+2026-07-13 14:37:24,886 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/originals/20260713_143723_chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg
+2026-07-13 14:37:24,887 [root INFO] - Deleted local file: downloads\processed_chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg
+2026-07-13 14:37:24,889 [root INFO] - Deleted local file: downloads\chat_AC00CAE00DACA824CF9BC7CCC7B31A65.jpg
+2026-07-13 14:37:24,891 [meta_publisher INFO] - Initiating Instagram Story publication...
+2026-07-13 14:37:31,679 [meta_publisher INFO] - Created IG Story container: 18111282485291837. Waiting for processing...
+2026-07-13 14:37:31,680 [meta_publisher INFO] - Checking container 18111282485291837 status (attempt 1/15)...
+2026-07-13 14:37:32,256 [meta_publisher INFO] - Container 18111282485291837 status: IN_PROGRESS
+2026-07-13 14:37:37,256 [meta_publisher INFO] - Checking container 18111282485291837 status (attempt 2/15)...
+2026-07-13 14:37:38,071 [meta_publisher INFO] - Container 18111282485291837 status: FINISHED
+2026-07-13 14:37:40,963 [meta_publisher INFO] - Successfully published IG Story. Post ID: 18107509901321232
+2026-07-13 14:37:40,965 [meta_publisher INFO] - Initiating Facebook Page Story publication...
+2026-07-13 14:37:53,007 [meta_publisher INFO] - Successfully published Facebook Page Photo Story. Story ID: 27645812418368367
+2026-07-13 14:37:53,015 [meta_publisher INFO] - Initiating Threads publication...
+2026-07-13 14:37:57,466 [meta_publisher INFO] - Created Threads container: 18140059774524520. Waiting for processing...
+2026-07-13 14:37:57,467 [meta_publisher INFO] - Checking container 18140059774524520 status (attempt 1/15)...
+2026-07-13 14:37:57,980 [meta_publisher INFO] - Container 18140059774524520 status: FINISHED
+2026-07-13 14:38:00,015 [meta_publisher INFO] - Successfully published to Threads. Post ID: 17862543687648839
+2026-07-13 14:38:00,711 [root INFO] - 📊 Monitoring log saved → Admin (6285280599185)
+2026-07-13 14:38:39,973 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:38:39,973 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:38:40,924 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:38:41,494 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:39:34,980 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:39:34,980 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:39:36,019 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:39:36,616 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:39:43,027 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:39:43,027 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:39:44,251 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:39:44,452 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:39:45,588 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:39:54,989 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:39:54,989 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:39:55,973 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:39:56,116 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:39:56,552 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:40:00,644 [supabase_uploader INFO] - Initialized Supabase client targeting bucket: 'disseminator-media'
+2026-07-13 14:40:00,644 [media_processor INFO] - Processing image for Story API compatibility: downloads\chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg
+2026-07-13 14:40:00,655 [media_processor INFO] - Resizing/Padding from (681x1034) to target 9:16 (681x1210)
+2026-07-13 14:40:00,674 [media_processor INFO] - Processed image saved to: downloads\processed_chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg
+2026-07-13 14:40:00,675 [supabase_uploader INFO] - Uploading file 'downloads\processed_chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg' to remote path 'stories/20260713_144000_processed_chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg' (Type: image/jpeg)...
+2026-07-13 14:40:01,833 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/stories/20260713_144000_processed_chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg "HTTP/2 200 OK"
+2026-07-13 14:40:01,834 [supabase_uploader INFO] - Successfully uploaded: stories/20260713_144000_processed_chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg
+2026-07-13 14:40:01,834 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/stories/20260713_144000_processed_chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg
+2026-07-13 14:40:01,834 [supabase_uploader INFO] - Uploading file 'downloads\chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg' to remote path 'originals/20260713_144000_chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg' (Type: image/jpeg)...
+2026-07-13 14:40:02,175 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/originals/20260713_144000_chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg "HTTP/2 200 OK"
+2026-07-13 14:40:02,176 [supabase_uploader INFO] - Successfully uploaded: originals/20260713_144000_chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg
+2026-07-13 14:40:02,176 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/originals/20260713_144000_chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg
+2026-07-13 14:40:02,177 [root INFO] - Deleted local file: downloads\processed_chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg
+2026-07-13 14:40:02,177 [root INFO] - Deleted local file: downloads\chat_ACDDDDAAD08007EF96F26B0E686C4AFD.jpg
+2026-07-13 14:40:02,178 [meta_publisher INFO] - Initiating Instagram Story publication...
+2026-07-13 14:40:07,003 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:40:07,003 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:40:08,066 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:40:08,281 [whatsmeow.Client WARNING] - Received stream end frame
+2026-07-13 14:40:08,281 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:40:08,384 [meta_publisher INFO] - Created IG Story container: 18111282650291837. Waiting for processing...
+2026-07-13 14:40:08,385 [meta_publisher INFO] - Checking container 18111282650291837 status (attempt 1/15)...
+2026-07-13 14:40:08,397 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: EOF
+2026-07-13 14:40:08,742 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:40:08,927 [meta_publisher INFO] - Container 18111282650291837 status: IN_PROGRESS
+2026-07-13 14:40:13,928 [meta_publisher INFO] - Checking container 18111282650291837 status (attempt 2/15)...
+2026-07-13 14:40:14,750 [meta_publisher INFO] - Container 18111282650291837 status: FINISHED
+2026-07-13 14:40:17,610 [meta_publisher INFO] - Successfully published IG Story. Post ID: 18602548810032424
+2026-07-13 14:40:17,612 [meta_publisher INFO] - Initiating Facebook Page Story publication...
+2026-07-13 14:40:28,530 [meta_publisher INFO] - Successfully published Facebook Page Photo Story. Story ID: 1573152390906469
+2026-07-13 14:40:28,534 [meta_publisher INFO] - Initiating Threads publication...
+2026-07-13 14:40:32,471 [meta_publisher INFO] - Created Threads container: 18140060404524520. Waiting for processing...
+2026-07-13 14:40:32,472 [meta_publisher INFO] - Checking container 18140060404524520 status (attempt 1/15)...
+2026-07-13 14:40:33,292 [meta_publisher INFO] - Container 18140060404524520 status: FINISHED
+2026-07-13 14:40:35,092 [meta_publisher INFO] - Successfully published to Threads. Post ID: 17981792649043499
+2026-07-13 14:40:35,364 [root INFO] - 📊 Monitoring log saved → Admin (6285280599185)
+2026-07-13 14:40:45,910 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:40:45,911 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:40:46,880 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:40:47,103 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:40:47,424 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:40:52,424 [supabase_uploader INFO] - Initialized Supabase client targeting bucket: 'disseminator-media'
+2026-07-13 14:40:52,424 [media_processor INFO] - Processing image for Story API compatibility: downloads\chat_3AC17372D5CDEB3EFC69.jpg
+2026-07-13 14:40:52,434 [media_processor INFO] - Resizing/Padding from (681x1034) to target 9:16 (681x1210)
+2026-07-13 14:40:52,453 [media_processor INFO] - Processed image saved to: downloads\processed_chat_3AC17372D5CDEB3EFC69.jpg
+2026-07-13 14:40:52,454 [supabase_uploader INFO] - Uploading file 'downloads\processed_chat_3AC17372D5CDEB3EFC69.jpg' to remote path 'stories/20260713_144052_processed_chat_3AC17372D5CDEB3EFC69.jpg' (Type: image/jpeg)...
+2026-07-13 14:40:53,030 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/stories/20260713_144052_processed_chat_3AC17372D5CDEB3EFC69.jpg "HTTP/2 200 OK"
+2026-07-13 14:40:53,031 [supabase_uploader INFO] - Successfully uploaded: stories/20260713_144052_processed_chat_3AC17372D5CDEB3EFC69.jpg
+2026-07-13 14:40:53,031 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/stories/20260713_144052_processed_chat_3AC17372D5CDEB3EFC69.jpg
+2026-07-13 14:40:53,031 [supabase_uploader INFO] - Uploading file 'downloads\chat_3AC17372D5CDEB3EFC69.jpg' to remote path 'originals/20260713_144052_chat_3AC17372D5CDEB3EFC69.jpg' (Type: image/jpeg)...
+2026-07-13 14:40:53,305 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/originals/20260713_144052_chat_3AC17372D5CDEB3EFC69.jpg "HTTP/2 200 OK"
+2026-07-13 14:40:53,306 [supabase_uploader INFO] - Successfully uploaded: originals/20260713_144052_chat_3AC17372D5CDEB3EFC69.jpg
+2026-07-13 14:40:53,306 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/originals/20260713_144052_chat_3AC17372D5CDEB3EFC69.jpg
+2026-07-13 14:40:53,307 [root INFO] - Deleted local file: downloads\processed_chat_3AC17372D5CDEB3EFC69.jpg
+2026-07-13 14:40:53,308 [root INFO] - Deleted local file: downloads\chat_3AC17372D5CDEB3EFC69.jpg
+2026-07-13 14:40:53,308 [meta_publisher INFO] - Initiating Instagram Story publication...
+2026-07-13 14:40:58,130 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:40:58,130 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:40:59,335 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:40:59,566 [whatsmeow.Client WARNING] - Received stream end frame
+2026-07-13 14:40:59,566 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:40:59,715 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: EOF
+2026-07-13 14:40:59,798 [meta_publisher INFO] - Created IG Story container: 18111282695291837. Waiting for processing...
+2026-07-13 14:40:59,798 [meta_publisher INFO] - Checking container 18111282695291837 status (attempt 1/15)...
+2026-07-13 14:41:00,104 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:41:00,551 [meta_publisher INFO] - Container 18111282695291837 status: IN_PROGRESS
+2026-07-13 14:41:05,551 [meta_publisher INFO] - Checking container 18111282695291837 status (attempt 2/15)...
+2026-07-13 14:41:06,123 [meta_publisher INFO] - Container 18111282695291837 status: FINISHED
+2026-07-13 14:41:09,030 [meta_publisher INFO] - Successfully published IG Story. Post ID: 17978661983881932
+2026-07-13 14:41:09,031 [meta_publisher INFO] - Initiating Facebook Page Story publication...
+2026-07-13 14:41:21,030 [meta_publisher INFO] - Successfully published Facebook Page Photo Story. Story ID: 1544347554155001
+2026-07-13 14:41:21,033 [meta_publisher INFO] - Initiating Threads publication...
+2026-07-13 14:41:23,924 [meta_publisher INFO] - Created Threads container: 18140060518524520. Waiting for processing...
+2026-07-13 14:41:23,924 [meta_publisher INFO] - Checking container 18140060518524520 status (attempt 1/15)...
+2026-07-13 14:41:24,366 [meta_publisher INFO] - Container 18140060518524520 status: IN_PROGRESS
+2026-07-13 14:41:29,367 [meta_publisher INFO] - Checking container 18140060518524520 status (attempt 2/15)...
+2026-07-13 14:41:29,868 [meta_publisher INFO] - Container 18140060518524520 status: FINISHED
+2026-07-13 14:41:31,680 [meta_publisher INFO] - Successfully published to Threads. Post ID: 18104170528872792
+2026-07-13 14:41:31,910 [root INFO] - 📊 Monitoring log saved → Irsyad (6281266419227)
+2026-07-13 14:41:42,923 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:41:42,923 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:41:44,171 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:41:44,300 [whatsmeow.Client WARNING] - Received stream end frame
+2026-07-13 14:41:44,300 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:41:44,977 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:41:54,975 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:41:54,976 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:41:55,886 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:41:56,192 [whatsmeow.Client WARNING] - Received stream end frame
+2026-07-13 14:41:56,193 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:41:56,481 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:42:07,094 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:42:07,094 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:42:08,249 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:42:08,452 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:42:08,935 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:42:19,051 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:42:19,051 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:42:20,122 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:42:20,271 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:42:20,772 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:42:30,960 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:42:30,960 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:42:32,175 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:42:32,309 [whatsmeow.Client WARNING] - Received stream end frame
+2026-07-13 14:42:32,309 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:42:32,926 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:42:42,995 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:42:42,996 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:42:43,865 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:42:44,066 [whatsmeow.Client WARNING] - Received stream end frame
+2026-07-13 14:42:44,066 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:42:44,433 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:42:54,977 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:42:54,977 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:42:55,956 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:42:56,090 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:42:56,534 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:43:07,027 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:43:07,027 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:43:08,015 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:43:08,121 [whatsmeow.Client WARNING] - Received stream end frame
+2026-07-13 14:43:08,121 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:43:08,604 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:43:18,920 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:43:18,920 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:43:19,836 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:43:19,979 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:43:20,420 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:43:30,946 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:43:30,947 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:43:32,120 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:43:32,348 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:43:32,894 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:43:42,926 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:43:42,926 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:43:44,159 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:43:44,269 [whatsmeow.Client WARNING] - Received stream end frame
+2026-07-13 14:43:44,269 [whatsmeow.Client INFO] - Got replaced stream error, sending StreamReplaced event
+2026-07-13 14:43:44,964 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:48:30,527 [root INFO] - Starting WhatsApp Channel Listener...
+2026-07-13 14:48:30,528 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
+2026-07-13 14:48:31,544 [whatsmeow.Client INFO] - Successfully authenticated
+2026-07-13 14:48:32,124 [root INFO] - Successfully connected to WhatsApp!
+2026-07-13 14:48:51,106 [supabase_uploader INFO] - Initialized Supabase client targeting bucket: 'disseminator-media'
+2026-07-13 14:48:51,106 [media_processor INFO] - Processing image for Story API compatibility: downloads\chat_3A8D083BD7CB81992FF0.jpg
+2026-07-13 14:48:51,117 [media_processor INFO] - Resizing/Padding from (681x1034) to target 9:16 (681x1210)
+2026-07-13 14:48:51,161 [media_processor INFO] - Processed image saved to: downloads\processed_chat_3A8D083BD7CB81992FF0.jpg
+2026-07-13 14:48:51,161 [supabase_uploader INFO] - Uploading file 'downloads\processed_chat_3A8D083BD7CB81992FF0.jpg' to remote path 'stories/20260713_144851_processed_chat_3A8D083BD7CB81992FF0.jpg' (Type: image/jpeg)...
+2026-07-13 14:48:51,951 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/stories/20260713_144851_processed_chat_3A8D083BD7CB81992FF0.jpg "HTTP/2 200 OK"
+2026-07-13 14:48:51,953 [supabase_uploader INFO] - Successfully uploaded: stories/20260713_144851_processed_chat_3A8D083BD7CB81992FF0.jpg
+2026-07-13 14:48:51,953 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/stories/20260713_144851_processed_chat_3A8D083BD7CB81992FF0.jpg
+2026-07-13 14:48:51,954 [supabase_uploader INFO] - Uploading file 'downloads\chat_3A8D083BD7CB81992FF0.jpg' to remote path 'originals/20260713_144851_chat_3A8D083BD7CB81992FF0.jpg' (Type: image/jpeg)...
+2026-07-13 14:48:52,213 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/originals/20260713_144851_chat_3A8D083BD7CB81992FF0.jpg "HTTP/2 200 OK"
+2026-07-13 14:48:52,214 [supabase_uploader INFO] - Successfully uploaded: originals/20260713_144851_chat_3A8D083BD7CB81992FF0.jpg
+2026-07-13 14:48:52,214 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/originals/20260713_144851_chat_3A8D083BD7CB81992FF0.jpg
+2026-07-13 14:48:52,215 [root INFO] - Deleted local file: downloads\processed_chat_3A8D083BD7CB81992FF0.jpg
+2026-07-13 14:48:52,215 [root INFO] - Deleted local file: downloads\chat_3A8D083BD7CB81992FF0.jpg
+2026-07-13 14:48:52,215 [meta_publisher INFO] - Initiating Instagram Story publication...
+2026-07-13 14:48:58,736 [meta_publisher INFO] - Created IG Story container: 18111283856291837. Waiting for processing...
+2026-07-13 14:48:58,736 [meta_publisher INFO] - Checking container 18111283856291837 status (attempt 1/15)...
+2026-07-13 14:48:59,381 [meta_publisher INFO] - Container 18111283856291837 status: FINISHED
+2026-07-13 14:49:02,627 [meta_publisher INFO] - Successfully published IG Story. Post ID: 17929069437127875
+2026-07-13 14:49:02,631 [meta_publisher INFO] - Initiating Facebook Page Story publication...
+2026-07-13 14:49:12,815 [meta_publisher INFO] - Successfully published Facebook Page Photo Story. Story ID: 1562878072159571
+2026-07-13 14:49:12,817 [meta_publisher INFO] - Initiating Threads publication...
+2026-07-13 14:49:18,109 [meta_publisher INFO] - Created Threads container: 18140062180524520. Waiting for processing...
+2026-07-13 14:49:18,110 [meta_publisher INFO] - Checking container 18140062180524520 status (attempt 1/15)...
+2026-07-13 14:49:18,600 [meta_publisher INFO] - Container 18140062180524520 status: IN_PROGRESS
+2026-07-13 14:49:23,600 [meta_publisher INFO] - Checking container 18140062180524520 status (attempt 2/15)...
+2026-07-13 14:49:24,078 [meta_publisher INFO] - Container 18140062180524520 status: FINISHED
+2026-07-13 14:49:26,137 [meta_publisher INFO] - Successfully published to Threads. Post ID: 18086538305355603
+2026-07-13 14:49:26,682 [root INFO] - 📊 Monitoring log saved → Irsyad (6281266419227)
