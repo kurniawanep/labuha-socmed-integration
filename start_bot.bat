@@ -4,20 +4,19 @@
 
 cd /d "c:\Users\BMKG\Downloads\LATSAR IRSYAD\aktualisasi"
 
-:: Check if another instance is already running via lock file
-if exist bot.lock (
-    echo [%date% %time%] Another instance already running. Exiting.
-    exit /b
-)
-
 :: Wait 15 seconds for network to be ready after boot
 timeout /t 15 /nobreak >nul
 
 :loop
-echo %~dp0 > bot.lock
 echo [%date% %time%] Starting bot...
 "c:\Users\BMKG\Downloads\LATSAR IRSYAD\aktualisasi\.venv\Scripts\python.exe" main.py
-del bot.lock 2>nul
+
+:: If main.py exited with errorlevel 99, another instance is already running.
+if %ERRORLEVEL% equ 99 (
+    echo [%date% %time%] Another instance is already running. Exiting.
+    exit /b
+)
+
 echo [%date% %time%] Bot exited. Restarting in 10 seconds...
 timeout /t 10 /nobreak >nul
 goto loop

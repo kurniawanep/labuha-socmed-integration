@@ -5,7 +5,6 @@
 echo Stopping existing bot instances...
 taskkill /F /IM python.exe /T 2>nul
 taskkill /F /IM cmd.exe /FI "WINDOWTITLE eq*start_bot*" /T 2>nul
-del "c:\Users\BMKG\Downloads\LATSAR IRSYAD\aktualisasi\bot.lock" 2>nul
 
 timeout /t 3 /nobreak >nul
 

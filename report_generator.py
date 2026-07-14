@@ -55,26 +55,26 @@ def print_summary_table(rows: list[dict], start_dt: str, end_dt: str):
     width = 72
     print()
     print("=" * width)
-    print(f"  [RECAP]  DISSEMINATION RECAP")
-    print(f"  Period : {label}")
+    print(f"  [REKAPITULASI]  REKAP PENYEBARAN INFORMASI")
+    print(f"  Periode : {label}")
     print("=" * width)
 
     if not rows:
-        print("  (No dissemination logs found for this period.)")
+        print("  (Tidak ada log penyebaran informasi yang ditemukan untuk periode ini.)")
         print("=" * width)
         return
 
-    header = f"  {'#':<4} {'Name':<25} {'WA Number':<18} {'Sent':>6}  Status"
+    header = f"  {'#':<4} {'Nama':<25} {'Nomor WA':<18} {'Terkirim':>8}  Status"
     print(header)
     print("-" * width)
 
     for i, r in enumerate(rows, 1):
-        badge = "[OK] Registered" if r["is_registered"] else "[!] Unregistered"
-        print(f"  {i:<4} {r['name']:<25} {r['wa_number']:<18} {r['count']:>6}  {badge}")
+        badge = "[OK] Terdaftar" if r["is_registered"] else "[!] Belum Terdaftar"
+        print(f"  {i:<4} {r['name']:<25} {r['wa_number']:<18} {r['count']:>8}  {badge}")
 
     total = sum(r["count"] for r in rows)
     print("-" * width)
-    print(f"  {'TOTAL':<52} {total:>6}")
+    print(f"  {'TOTAL':<49} {total:>8}")
     print("=" * width)
     print()
 
@@ -83,16 +83,16 @@ def print_detail_table(logs: list[dict], start_dt: str, end_dt: str):
     width = 92
     print()
     print("=" * width)
-    print(f"  [DETAIL LOG]")
-    print(f"  Period : {label}")
+    print(f"  [LOG DETAIL]")
+    print(f"  Periode : {label}")
     print("=" * width)
 
     if not logs:
-        print("  (No logs found for this period.)")
+        print("  (Tidak ada log yang ditemukan untuk periode ini.)")
         print("=" * width)
         return
 
-    print(f"  {'Timestamp':<22} {'Name':<22} {'WA Number':<16} {'Type':<8} {'Message'}")
+    print(f"  {'Waktu':<22} {'Nama':<22} {'Nomor WA':<16} {'Tipe':<8} {'Pesan'}")
     print("-" * width)
 
     for r in logs:
@@ -103,7 +103,7 @@ def print_detail_table(logs: list[dict], start_dt: str, end_dt: str):
         print(f"  {ts:<22} {r.get('name','?'):<22} {r.get('wa_number','?'):<16} {r.get('media_type','?'):<8} {msg}")
 
     print("=" * width)
-    print(f"  Total rows: {len(logs)}")
+    print(f"  Total baris: {len(logs)}")
     print()
 
 def export_summary_csv(rows: list[dict], logs: list[dict], filename: str) -> str:
@@ -116,7 +116,7 @@ def export_summary_csv(rows: list[dict], logs: list[dict], filename: str) -> str
         w = csv.writer(f)
 
         # Section 1: individual submissions
-        w.writerow(["Timestamp", "Name", "WA Number", "Media Type"])
+        w.writerow(["Waktu", "Nama", "Nomor WA", "Tipe Media"])
         for r in logs:
             ts = (r.get("timestamp") or "")[:19].replace("T", " ")
             w.writerow([
@@ -128,14 +128,14 @@ def export_summary_csv(rows: list[dict], logs: list[dict], filename: str) -> str
 
         # Section 2: count summary
         w.writerow([])
-        w.writerow(["-- RECAP PER STAFF --", "", "", ""])
-        w.writerow(["Name", "WA Number", "Total Sent", "Registered"])
+        w.writerow(["-- REKAP PER PEGAWAI --", "", "", ""])
+        w.writerow(["Nama", "Nomor WA", "Total Terkirim", "Terdaftar"])
         for r in rows:
             w.writerow([
                 r["name"],
                 r["wa_number"],
                 r["count"],
-                "Yes" if r["is_registered"] else "No",
+                "Ya" if r["is_registered"] else "Tidak",
             ])
         if rows:
             w.writerow([])
@@ -146,7 +146,7 @@ def export_summary_csv(rows: list[dict], logs: list[dict], filename: str) -> str
 def export_detail_csv(logs: list[dict], filename: str) -> str:
     with open(filename, "w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f)
-        w.writerow(["Timestamp", "Name", "WA Number", "Media Type", "Message", "Status"])
+        w.writerow(["Waktu", "Nama", "Nomor WA", "Tipe Media", "Pesan", "Status"])
         for r in logs:
             ts = (r.get("timestamp") or "")[:19].replace("T", " ")
             w.writerow([
@@ -163,17 +163,17 @@ def cmd_list_staff():
     staff = load_staff()
     print()
     print("=" * 50)
-    print("  REGISTERED STAFF  (staff.json)")
+    print("  DAFTAR PEGAWAI TERDAFTAR  (staff.json)")
     print("=" * 50)
     if not staff:
-        print("  (No staff entries found.)")
+        print("  (Tidak ada data pegawai yang ditemukan.)")
     for i, s in enumerate(staff, 1):
         print(f"  {i}. {s.get('name', '?'):<25}  {s.get('wa_number', '?')}")
     print("=" * 50)
     print()
 
 def cmd_cleanup_storage(older_than_days: int):
-    print(f"Deleting Supabase files older than {older_than_days} days ...")
+    print(f"Menghapus file Supabase yang lebih lama dari {older_than_days} hari ...")
     uploader = SupabaseUploader()
     total_deleted, total_failed = [], []
     for folder in ("stories", "originals", "videos"):
@@ -181,14 +181,14 @@ def cmd_cleanup_storage(older_than_days: int):
         total_deleted.extend(result["deleted"])
         total_failed.extend(result["failed"])
 
-    print(f"  Deleted : {len(total_deleted)} files")
+    print(f"  Terhapus : {len(total_deleted)} file")
     for p in total_deleted:
         print(f"    - {p}")
     if total_failed:
-        print(f"  Failed  : {len(total_failed)} files")
+        print(f"  Gagal    : {len(total_failed)} file")
         for p in total_failed:
             print(f"    ! {p}")
-    print("Done.")
+    print("Selesai.")
 
 def cmd_list_storage():
     uploader = SupabaseUploader()
@@ -196,20 +196,20 @@ def cmd_list_storage():
     width = 70
     print()
     print("=" * width)
-    print("  SUPABASE STORAGE CONTENTS")
+    print("  DAFTAR PENYIMPANAN SUPABASE")
     print("=" * width)
     if not files:
-        print("  (No files found.)")
+        print("  (Tidak ada file yang ditemukan.)")
         print("=" * width)
         return
-    print(f"  {'Folder':<12} {'Age(days)':>9}  {'Size(KB)':>9}  Name")
+    print(f"  {'Folder':<12} {'Umur(hari)':>10}  {'Ukuran(KB)':>10}  Nama")
     print("-" * width)
     total_kb = 0
     for f in sorted(files, key=lambda x: x["age_days"], reverse=True):
-        print(f"  {f['folder']:<12} {f['age_days']:>9}  {f['size_kb']:>9}  {f['name']}")
+        print(f"  {f['folder']:<12} {f['age_days']:>10}  {f['size_kb']:>10}  {f['name']}")
         total_kb += f['size_kb']
     print("-" * width)
-    print(f"  Total: {len(files)} files,  {total_kb:.1f} KB  ({total_kb/1024:.2f} MB)")
+    print(f"  Total: {len(files)} file,  {total_kb:.1f} KB  ({total_kb/1024:.2f} MB)")
     print("=" * width)
     print()
 
@@ -218,31 +218,31 @@ def cmd_list_storage():
 def parse_args():
     parser = argparse.ArgumentParser(
         prog="report_generator.py",
-        description="Generate dissemination recap and manage Supabase storage.",
+        description="Membuat rekapitulasi penyebaran informasi dan mengelola penyimpanan Supabase.",
     )
     parser.add_argument(
         "--from", dest="start_date", metavar="YYYY-MM-DD",
-        help="Start date (inclusive). Omit to include ALL records.",
+        help="Tanggal mulai (inklusif). Kosongkan untuk menyertakan SEMUA data.",
     )
     parser.add_argument(
         "--to", dest="end_date", metavar="YYYY-MM-DD",
-        help="End date (inclusive). Omit to include ALL records.",
+        help="Tanggal selesai (inklusif). Kosongkan untuk menyertakan SEMUA data.",
     )
     parser.add_argument(
         "--detail", action="store_true",
-        help="Show every individual log entry instead of the summary.",
+        help="Tampilkan setiap log detail individu alih-alih ringkasan.",
     )
     parser.add_argument(
         "--list-staff", action="store_true",
-        help="Print all registered staff from staff.json and exit.",
+        help="Tampilkan semua pegawai terdaftar dari staff.json lalu keluar.",
     )
     parser.add_argument(
         "--list-storage", action="store_true",
-        help="List all files in Supabase storage with sizes and ages.",
+        help="Tampilkan semua file di penyimpanan Supabase beserta ukuran dan umur file.",
     )
     parser.add_argument(
         "--cleanup-storage", dest="cleanup_days", metavar="DAYS", type=int, nargs="?", const=7,
-        help="Delete Supabase files older than DAYS days (default: 7).",
+        help="Hapus file Supabase yang lebih lama dari DAYS hari (default: 7).",
     )
     return parser.parse_args()
 
@@ -275,18 +275,18 @@ def main():
             try:
                 datetime.strptime(val, "%Y-%m-%d")
             except ValueError:
-                print(f"Invalid {label} date '{val}'. Use YYYY-MM-DD format.")
+                print(f"Format tanggal {label} '{val}' tidak valid. Gunakan format YYYY-MM-DD.")
                 sys.exit(1)
 
         if start > end:
-            print(f"--from ({start}) must not be after --to ({end}).")
+            print(f"Tanggal mulai/--from ({start}) tidak boleh melebihi tanggal selesai/--to ({end}).")
             sys.exit(1)
 
         # Full datetime strings for display
         start_dt = f"{start} 00:00:00"
         end_dt   = f"{end} 23:59:59"
 
-        print(f"Fetching data from Supabase  [{start_dt}  ->  {end_dt}] ...")
+        print(f"Mengambil data dari Supabase  [{start_dt}  ->  {end_dt}] ...")
 
         if args.detail:
             logs = get_raw_logs(start, end)
@@ -294,9 +294,9 @@ def main():
             if logs:
                 fname = f"log_detail_{start}_{end}.csv"
                 csv_path = export_detail_csv(logs, fname)
-                print(f"Detail CSV exported: {csv_path}")
+                print(f"CSV detail berhasil diekspor: {csv_path}")
             else:
-                print("No data to export.")
+                print("Tidak ada data untuk diekspor.")
         else:
             rows = get_recap(start, end)
             logs = get_raw_logs(start, end)   # needed for per-row timestamps in CSV
@@ -304,13 +304,13 @@ def main():
             if rows:
                 fname = f"recap_{start}_{end}.csv"
                 csv_path = export_summary_csv(rows, logs, fname)
-                print(f"Summary CSV exported: {csv_path}")
+                print(f"CSV ringkasan berhasil diekspor: {csv_path}")
             else:
-                print("No data to export.")
+                print("Tidak ada data untuk diekspor.")
 
     else:
         # No date filter — fetch ALL records
-        print("Fetching ALL records from Supabase ...")
+        print("Mengambil SEMUA data dari Supabase ...")
 
         if args.detail:
             logs = get_all_raw_logs()
@@ -319,9 +319,9 @@ def main():
             print_detail_table(logs, start_dt, end_dt)
             if logs:
                 csv_path = export_detail_csv(logs, "log_detail_all.csv")
-                print(f"Detail CSV exported: {csv_path}")
+                print(f"CSV detail berhasil diekspor: {csv_path}")
             else:
-                print("No data to export.")
+                print("Tidak ada data untuk diekspor.")
         else:
             rows, earliest, latest = get_all_recap()
             logs = get_all_raw_logs()          # needed for per-row timestamps in CSV
@@ -330,9 +330,9 @@ def main():
             print_summary_table(rows, start_dt, end_dt)
             if rows:
                 csv_path = export_summary_csv(rows, logs, "recap_all.csv")
-                print(f"Summary CSV exported: {csv_path}")
+                print(f"CSV ringkasan berhasil diekspor: {csv_path}")
             else:
-                print("No data to export.")
+                print("Tidak ada data untuk diekspor.")
 
 if __name__ == "__main__":
     main()
