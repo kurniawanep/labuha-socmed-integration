@@ -7,8 +7,18 @@ from datetime import datetime
 from dotenv import load_dotenv
 from neonize.client import NewClient
 from neonize.events import MessageEv, ConnectedEv, StreamReplacedEv, DisconnectedEv
-from neonize.utils.jid import Jid2String
+from neonize.utils.jid import Jid2String, build_jid
 from media_processor import prepare_image_for_story
+
+def parse_jid(jid_str: str):
+    jid_str = jid_str.strip()
+    if not jid_str:
+        return None
+    if "@" in jid_str:
+        user, server = jid_str.split("@", 1)
+        return build_jid(user, server)
+    return build_jid(jid_str, "s.whatsapp.net")
+
 from supabase_uploader import SupabaseUploader
 from meta_publisher import MetaPublisher
 import db_monitor
@@ -76,8 +86,15 @@ def parse_message_content(msg_proto):
 client = NewClient("session.sqlite3")
 
 @client.event(ConnectedEv)
-def on_connected(_: NewClient, __: ConnectedEv):
-    logging.info("Successfully connected to WhatsApp!")
+def on_connected(client: NewClient, __: ConnectedEv):
+    try:
+        me = client.get_me()
+        me_jid_str = Jid2String(me.JID) if me and me.JID else "Unknown"
+        logging.info(f"Successfully connected to WhatsApp as: {me_jid_str} (Name: {me.PushName})")
+    except Exception as e:
+        logging.info(f"Successfully connected to WhatsApp (failed to retrieve account info: {e})")
+
+
 
 @client.event(StreamReplacedEv)
 def on_stream_replaced(_: NewClient, __: StreamReplacedEv):
@@ -103,14 +120,36 @@ def on_message(client: NewClient, message: MessageEv):
     chat_jid = message.Info.MessageSource.Chat
     chat_id = Jid2String(chat_jid)
     
+    # Completely ignore channel/newsletter updates
+    if chat_jid.Server == "newsletter":
+        return
+    
+    is_newsletter = chat_jid.Server == "newsletter"
+    channel_name = "Unknown Channel"
+    
+    if is_newsletter:
+        if chat_id not in channel_cache:
+            try:
+                meta = client.get_newsletter_info(chat_jid)
+                channel_name = meta.ThreadMeta.Name
+                channel_cache[chat_id] = channel_name
+            except Exception as e:
+                channel_name = "Unknown Channel"
+        else:
+            channel_name = channel_cache[chat_id]
+
     # Check message sender
     sender_jid = message.Info.MessageSource.Sender
     sender_id = Jid2String(sender_jid) if sender_jid else chat_id
-    sender_name = message.Info.Pushname or "Unknown Sender"
+    sender_name = channel_name if is_newsletter else (message.Info.Pushname or "Unknown Sender")
 
-    # Resolve the real WA phone number from either @lid or @s.whatsapp.net JID.
-    # resolve_phone() queries whatsmeow_lid_map in session.sqlite3 for @lid JIDs.
-    sender_id = resolve_phone(sender_id) or resolve_phone(chat_id)
+    if is_newsletter:
+        sender_id = chat_id
+    else:
+        # Resolve the real WA phone number from either @lid or @s.whatsapp.net JID.
+        # resolve_phone() queries whatsmeow_lid_map in session.sqlite3 for @lid JIDs.
+        sender_id = resolve_phone(sender_id) or resolve_phone(chat_id)
+
     
     # Convert timestamp safely
     timestamp = message.Info.Timestamp
@@ -134,40 +173,29 @@ def on_message(client: NewClient, message: MessageEv):
     
     # Log everything to the terminal
     if chat_jid.Server == "newsletter":
-        # Resolve channel name (caching results to be polite to WhatsApp servers)
-        if chat_id not in channel_cache:
-            try:
-                meta = client.get_newsletter_info(chat_jid)
-                channel_name = meta.ThreadMeta.Name
-                channel_cache[chat_id] = channel_name
-            except Exception as e:
-                channel_name = "Unknown Channel"
-        else:
-            channel_name = channel_cache[chat_id]
-            
-        print("\n" + "="*50)
-        print(f"📢 NEW CHANNEL MESSAGE RECEIVED")
-        print(f"Channel Name: {channel_name}")
-        print(f"Channel ID:   {chat_id}")
-        print(f"Time:         {formatted_time}")
-        print(f"Text Content: {text_content if text_content else '[No Text]'}")
+        logging.info("="*50)
+        logging.info(f"📢 NEW CHANNEL MESSAGE RECEIVED")
+        logging.info(f"Channel Name: {channel_name}")
+        logging.info(f"Channel ID:   {chat_id}")
+        logging.info(f"Time:         {formatted_time}")
+        logging.info(f"Text Content: {text_content if text_content else '[No Text]'}")
     else:
         # Check if group or direct chat
         chat_type = "GROUP" if message.Info.MessageSource.IsGroup else "DIRECT CHAT"
-        print("\n" + "-"*50)
-        print(f"💬 NEW {chat_type} MESSAGE RECEIVED")
-        print(f"From (Name):  {sender_name}")
-        print(f"From (JID):   {sender_id}")
+        logging.info("-"*50)
+        logging.info(f"💬 NEW {chat_type} MESSAGE RECEIVED")
+        logging.info(f"From (Name):  {sender_name}")
+        logging.info(f"From (JID):   {sender_id}")
         if message.Info.MessageSource.IsGroup:
-            print(f"Group ID:     {chat_id}")
-        print(f"Time:         {formatted_time}")
-        print(f"Text Content: {text_content if text_content else '[No Text]'}")
+            logging.info(f"Group ID:     {chat_id}")
+        logging.info(f"Time:         {formatted_time}")
+        logging.info(f"Text Content: {text_content if text_content else '[No Text]'}")
         
     media_path = None
     
     # Download media if present
     if media_type and media_data:
-        print(f"Attachment:   ({media_type}) [Downloading...]")
+        logging.info(f"Attachment:   ({media_type}) [Downloading...]")
         try:
             # download_any downloads content based on the parent Message object
             media_bytes = client.download_any(message.Message)
@@ -190,14 +218,14 @@ def on_message(client: NewClient, message: MessageEv):
                 media_path = os.path.join(DOWNLOADS_DIR, filename)
                 with open(media_path, "wb") as f:
                     f.write(media_bytes)
-                print(f"Saved media to: {media_path}")
+                logging.info(f"Saved media to: {media_path}")
             else:
                 logging.warning("No media data returned by the downloader.")
         except Exception as e:
             logging.error(f"Failed to download media: {e}")
             
     if chat_jid.Server == "newsletter":
-        print("="*50 + "\n")
+        logging.info("="*50)
         
         # Log channel messages to a persistent JSON store
         log_entry = {
@@ -224,7 +252,8 @@ def on_message(client: NewClient, message: MessageEv):
         except Exception as e:
             logging.error(f"Failed to write to channel_messages.json: {e}")
     else:
-        print("-"*50 + "\n")
+        logging.info("-"*50)
+
 
     # --- ONE GATE DISSEMINATION PIPELINE ---
     
@@ -234,6 +263,7 @@ def on_message(client: NewClient, message: MessageEv):
     if is_group or is_newsletter:
         logging.info("Skipping dissemination: Message is not from a personal/direct chat (group or channel ignored).")
         return
+
     # 1. Filter by Sender if ALLOWED_SENDERS is configured
     allowed_senders_str = os.getenv("ALLOWED_SENDERS", "")
     allowed_senders = [s.strip() for s in allowed_senders_str.split(",") if s.strip()]
@@ -257,88 +287,124 @@ def on_message(client: NewClient, message: MessageEv):
             # Strip command prefix from the caption/text
             text_content = text_content[len(command_prefix):].strip()
 
-    # 3. Only disseminate if there is image/video media — text-only messages are ignored
-    if not media_path or media_type not in ["image", "video"]:
-        logging.info("Skipping: no image/video media found in message.")
+
+    # 3. Only disseminate if there is media — text-only messages are ignored
+    if not media_path or media_type not in ["image", "video", "document", "audio", "sticker"]:
+        logging.info(f"Skipping: unsupported media type '{media_type}' or no media path.")
         return
 
     media_url = None
     story_media_url = None  # Processed media specifically for IG/FB Stories
+    local_files_to_delete = []
 
     try:
-        # Initialize Supabase uploader
-        uploader = SupabaseUploader()
+        should_publish_meta = media_type in ["image", "video"]
 
-        # Unique name prefix for remote files
-        timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = os.path.basename(media_path)
+        if should_publish_meta:
+            try:
+                # Initialize Supabase uploader
+                uploader = SupabaseUploader()
 
-        # Track local paths to delete after successful upload
-        local_files_to_delete = []
+                # Unique name prefix for remote files
+                timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")
+                filename = os.path.basename(media_path)
 
-        if media_type == "image":
-            # Step 3a: Prepare image for Stories (convert to JPEG, pad to 9:16)
-            print(f"Preparing image for Stories (auto-conversion & 9:16 padding)...")
-            processed_path = prepare_image_for_story(media_path)
+                if media_type == "image":
+                    # Step 3a: Prepare image for Stories (convert to JPEG, pad to 9:16)
+                    logging.info(f"Preparing image for Stories (auto-conversion & 9:16 padding)...")
+                    processed_path = prepare_image_for_story(media_path)
 
-            # Step 3b: Upload processed image for IG/FB Stories
-            story_filename = os.path.basename(processed_path)
-            remote_story_path = f"stories/{timestamp_str}_{story_filename}"
-            print(f"Uploading processed story image to Supabase...")
-            story_media_url = uploader.upload_file(processed_path, remote_story_path)
-            local_files_to_delete.append(processed_path)
+                    # Step 3b: Upload processed image for IG/FB Stories
+                    story_filename = os.path.basename(processed_path)
+                    remote_story_path = f"stories/{timestamp_str}_{story_filename}"
+                    logging.info(f"Uploading processed story image to Supabase...")
+                    story_media_url = uploader.upload_file(processed_path, remote_story_path)
+                    local_files_to_delete.append(processed_path)
 
-            # Step 3c: Upload original image for Threads (if different)
-            if processed_path != media_path:
-                remote_orig_path = f"originals/{timestamp_str}_{filename}"
-                print(f"Uploading original image to Supabase...")
-                media_url = uploader.upload_file(media_path, remote_orig_path)
-                local_files_to_delete.append(media_path)
-            else:
-                media_url = story_media_url
+                    # Step 3c: Upload original image for Threads (if different)
+                    if processed_path != media_path:
+                        remote_orig_path = f"originals/{timestamp_str}_{filename}"
+                        logging.info(f"Uploading original image to Supabase...")
+                        media_url = uploader.upload_file(media_path, remote_orig_path)
+                        local_files_to_delete.append(media_path)
+                    else:
+                        media_url = story_media_url
+                else:
+                    # For video, upload directly
+                    remote_video_path = f"videos/{timestamp_str}_{filename}"
+                    logging.info(f"Uploading video to Supabase...")
+                    media_url = uploader.upload_file(media_path, remote_video_path)
+                    story_media_url = media_url
+                    local_files_to_delete.append(media_path)
+
+            except Exception as e:
+                logging.error(f"Media upload pipeline failed: {e}")
         else:
-            # For video, upload directly
-            remote_video_path = f"videos/{timestamp_str}_{filename}"
-            print(f"Uploading video to Supabase...")
-            media_url = uploader.upload_file(media_path, remote_video_path)
-            story_media_url = media_url
+            # For documents/audio/stickers, track the original downloaded file for cleanup
             local_files_to_delete.append(media_path)
 
-        # Delete local files after successful upload
-        for local_file in local_files_to_delete:
+        # 4. Publish to Meta platforms
+        results = {}
+        if should_publish_meta and (story_media_url or media_url):
+            logging.info("*"*50)
+            logging.info("MEDIA MESSAGE → Posting to Instagram + Facebook + Threads + WhatsApp Groups")
+            logging.info("*"*50)
             try:
-                if os.path.exists(local_file):
-                    os.remove(local_file)
-                    logging.info(f"Deleted local file: {local_file}")
-            except Exception as del_err:
-                logging.warning(f"Could not delete local file {local_file}: {del_err}")
+                publisher = MetaPublisher()
+                results = publisher.publish_to_all(
+                    text=text_content,
+                    media_url=story_media_url or media_url,
+                    media_type=media_type,
+                    local_media_path=media_path
+                )
+            except Exception as e:
+                logging.error(f"Meta dissemination failed: {e}")
+        else:
+            logging.info("*"*50)
+            logging.info("MEDIA MESSAGE → Posting to WhatsApp Groups ONLY (Meta bypassed for this file type)")
+            logging.info("*"*50)
 
-    except Exception as e:
-        logging.error(f"Media upload pipeline failed: {e}")
-
-
-    # 4. Publish to all Meta platforms
-    if story_media_url or media_url:
-        print("\n" + "*"*50)
-        print("MEDIA MESSAGE → Posting to Instagram + Facebook + Threads")
-        print("*"*50)
+        # 5. WhatsApp Targets Dissemination (for all media types)
         try:
-            publisher = MetaPublisher()
-            results = publisher.publish_to_all(
-                text=text_content,
-                media_url=story_media_url or media_url,
-                media_type=media_type,
-                local_media_path=media_path
-            )
-            print(f"Dissemination Complete. Results: {results}")
-            print("*"*50 + "\n")
+            # --- WhatsApp Targets Dissemination ---
+            wa_groups = [s.strip() for s in os.getenv("DISSEMINATION_WA_GROUPS", "").split(",") if s.strip()]
+            wa_group_success = False
 
-            # ── Staff Monitoring Log ──────────────────────────────────
+            if media_path and os.path.exists(media_path):
+                # Disseminate to WA Groups
+                for group_str in wa_groups:
+                    try:
+                        group_jid = parse_jid(group_str)
+                        if group_jid:
+                            logging.info(f"Forwarding media to WhatsApp Group: {group_str} (Type: {media_type})")
+                            if media_type == "image":
+                                client.send_image(group_jid, media_path, caption=text_content)
+                            elif media_type == "video":
+                                client.send_video(group_jid, media_path, caption=text_content)
+                            elif media_type == "document":
+                                client.send_document(group_jid, media_path, caption=text_content, filename=os.path.basename(media_path))
+                            elif media_type == "audio":
+                                client.send_audio(group_jid, media_path)
+                            elif media_type == "sticker":
+                                client.send_sticker(group_jid, media_path)
+                            else:
+                                client.send_document(group_jid, media_path, caption=text_content, filename=os.path.basename(media_path))
+                            wa_group_success = True
+                    except Exception as e:
+                        logging.error(f"Failed to disseminate to WhatsApp Group {group_str}: {e}")
+
+            logging.info(f"Dissemination Complete. Results (Meta): {results}, WA Group: {wa_group_success}")
+            logging.info("*"*50)
+
+            # ── Staff Monitoring Log (Recap) ─────────────────────────────
             try:
                 published_platforms = [
                     p for p, v in (results or {}).items()
                     if v and str(v).lower() not in ("false", "none", "error", "")
                 ]
+                if wa_group_success:
+                    published_platforms.append("wa_group")
+
                 log_status = "success" if published_platforms else "failed"
                 db_monitor.log_dissemination(
                     sender_wa=sender_id,
@@ -354,6 +420,16 @@ def on_message(client: NewClient, message: MessageEv):
 
         except Exception as e:
             logging.error(f"Dissemination execution failed: {e}")
+    finally:
+        # Delete local files after successful upload
+        for local_file in local_files_to_delete:
+            try:
+                if os.path.exists(local_file):
+                    os.remove(local_file)
+                    logging.info(f"Deleted local file: {local_file}")
+            except Exception as del_err:
+                logging.warning(f"Could not delete local file {local_file}: {del_err}")
+
 
 def auto_refresh_threads_token():
     """
