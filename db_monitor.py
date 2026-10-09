@@ -299,7 +299,7 @@ def get_all_raw_logs() -> list[dict]:
         if resp.status_code != 200:
             logging.error(f"Supabase all-log query failed [{resp.status_code}]: {resp.text}")
             return []
-        return resp.json()
+        return resp.json() 
     except Exception as e:
         logging.error(f"Failed to fetch all raw logs: {e}")
         return []

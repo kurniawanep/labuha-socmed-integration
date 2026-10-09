@@ -5,7 +5,7 @@
 cd /d "c:\Users\BMKG\Downloads\LATSAR IRSYAD\aktualisasi"
 
 :: Wait 15 seconds for network to be ready after boot
-timeout /t 15 /nobreak >nul
+C:\Windows\System32\timeout.exe /t 15 /nobreak >nul
 
 :loop
 echo [%date% %time%] Starting bot...
@@ -18,5 +18,5 @@ if %ERRORLEVEL% equ 99 (
 )
 
 echo [%date% %time%] Bot exited. Restarting in 10 seconds...
-timeout /t 10 /nobreak >nul
+C:\Windows\System32\timeout.exe /t 10 /nobreak >nul
 goto loop

@@ -6,7 +6,7 @@ echo Stopping existing bot instances...
 taskkill /F /IM python.exe /T 2>nul
 taskkill /F /IM cmd.exe /FI "WINDOWTITLE eq*start_bot*" /T 2>nul
 
-timeout /t 3 /nobreak >nul
+C:\Windows\System32\timeout.exe /t 3 /nobreak >nul
 
 echo Starting bot...
 start "" wscript.exe "c:\Users\BMKG\Downloads\LATSAR IRSYAD\aktualisasi\start_bot_silent.vbs"
