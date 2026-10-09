@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  simpan-mkg:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: simpan-mkg
+    restart: unless-stopped
+    env_file:
+      - .env
+    tty: true
+    stdin_open: true
+    volumes:
+      # Persistent session database so WhatsApp login stays saved
+      - ./session.sqlite3:/app/session.sqlite3
+      # Downloaded media storage
+      - ./downloads:/app/downloads
+      # Application log file
+      - ./bot.log:/app/bot.log
+      # Local JSON metadata files
+      - ./staff.json:/app/staff.json
+      - ./channel_messages.json:/app/channel_messages.json
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

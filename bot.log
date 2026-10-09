@@ -22050,3 +22050,355 @@ https://bmkghalsel.carrd.co/#maritim
 2026-10-08 08:05:33,314 [root INFO] - If this is the first run, a QR code will be generated in your terminal shortly. Scan it using Link a Device in WhatsApp.
 2026-10-08 08:05:34,267 [whatsmeow.Client INFO] - Successfully authenticated
 2026-10-08 08:05:34,817 [root INFO] - Successfully connected to WhatsApp as: 6283113114413:1@s.whatsapp.net (Name: SIMPAN MKG HALSEL)
+2026-10-08 15:33:26,561 [whatsmeow.Client ERROR] - Failed to handle retry receipt for 6282111741856-1563103425@g.us/3EB0DC4A02A2365E32EA66 from 185383774117958:65@lid: couldn't find message 3EB0DC4A02A2365E32EA66
+2026-10-08 15:33:41,313 [whatsmeow.Client ERROR] - Failed to handle retry receipt for 6282111741856-1563103425@g.us/3EB0BBEB898A6AC4F3BCF2 from 185383774117958:65@lid: couldn't find message 3EB0BBEB898A6AC4F3BCF2
+2026-10-08 15:34:00,400 [whatsmeow.Client ERROR] - Failed to handle retry receipt for 6282111741856-1563103425@g.us/3EB0716AA4578CA370AABE from 185383774117958:65@lid: couldn't find message 3EB0716AA4578CA370AABE
+2026-10-08 15:34:11,768 [whatsmeow.Client ERROR] - Failed to handle retry receipt for 6282111741856-1563103425@g.us/3EB08E306AE27721A963B9 from 185383774117958:65@lid: couldn't find message 3EB08E306AE27721A963B9
+2026-10-08 15:34:34,993 [whatsmeow.Client ERROR] - Failed to handle retry receipt for 6282111741856-1563103425@g.us/3EB00E09481CC46FB68199 from 185383774117958:65@lid: couldn't find message 3EB00E09481CC46FB68199
+2026-10-08 18:24:16,708 [root INFO] - --------------------------------------------------
+2026-10-08 18:24:16,709 [root INFO] - 💬 NEW DIRECT CHAT MESSAGE RECEIVED
+2026-10-08 18:24:16,710 [root INFO] - From (Name):  Stamet Oesman Sadik
+2026-10-08 18:24:16,710 [root INFO] - From (JID):   46175226957895:98
+2026-10-08 18:24:16,710 [root INFO] - Time:         2026-10-08 18:24:16
+2026-10-08 18:24:16,710 [root INFO] - Text Content: Selamat Sore
+Berikut kami sampaikan Informasi Prakiraan Cuaca Maritim dan Tinggi Gelombang di wilayah Perairan Halmahera Selatan untuk tanggal *09 Oktober 2026*.
+
+Informasi Cuaca Maritim Wilayah Halmahera Selatan selengkapnya dapat juga diakses melalui link:
+https://bmkghalsel.carrd.co/#maritim
+2026-10-08 18:24:16,710 [root INFO] - Attachment:   (image) [Downloading...]
+2026-10-08 18:24:17,740 [root INFO] - Saved media to: downloads\chat_3EB083474DF98D26ECC41E.jpg
+2026-10-08 18:24:17,740 [root INFO] - --------------------------------------------------
+2026-10-08 18:24:17,920 [supabase_uploader INFO] - Initialized Supabase client targeting bucket: 'disseminator-media'
+2026-10-08 18:24:17,920 [root INFO] - Preparing image for Stories (auto-conversion & 9:16 padding)...
+2026-10-08 18:24:17,920 [media_processor INFO] - Processing image for Story API compatibility: downloads\chat_3EB083474DF98D26ECC41E.jpg
+2026-10-08 18:24:17,933 [media_processor INFO] - Resizing/Padding from (1599x1600) to target 9:16 (1599x2842)
+2026-10-08 18:24:17,981 [media_processor INFO] - Processed image saved to: downloads\processed_chat_3EB083474DF98D26ECC41E.jpg
+2026-10-08 18:24:17,983 [root INFO] - Uploading processed story image to Supabase...
+2026-10-08 18:24:17,983 [supabase_uploader INFO] - Uploading file 'downloads\processed_chat_3EB083474DF98D26ECC41E.jpg' to remote path 'stories/20261008_182417_processed_chat_3EB083474DF98D26ECC41E.jpg' (Type: image/jpeg)...
+2026-10-08 18:24:19,145 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/stories/20261008_182417_processed_chat_3EB083474DF98D26ECC41E.jpg "HTTP/2 200 OK"
+2026-10-08 18:24:19,147 [supabase_uploader INFO] - Successfully uploaded: stories/20261008_182417_processed_chat_3EB083474DF98D26ECC41E.jpg
+2026-10-08 18:24:19,147 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/stories/20261008_182417_processed_chat_3EB083474DF98D26ECC41E.jpg
+2026-10-08 18:24:19,147 [root INFO] - Uploading original image to Supabase...
+2026-10-08 18:24:19,148 [supabase_uploader INFO] - Uploading file 'downloads\chat_3EB083474DF98D26ECC41E.jpg' to remote path 'originals/20261008_182417_chat_3EB083474DF98D26ECC41E.jpg' (Type: image/jpeg)...
+2026-10-08 18:24:19,593 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/originals/20261008_182417_chat_3EB083474DF98D26ECC41E.jpg "HTTP/2 200 OK"
+2026-10-08 18:24:19,594 [supabase_uploader INFO] - Successfully uploaded: originals/20261008_182417_chat_3EB083474DF98D26ECC41E.jpg
+2026-10-08 18:24:19,594 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/originals/20261008_182417_chat_3EB083474DF98D26ECC41E.jpg
+2026-10-08 18:24:19,594 [root INFO] - **************************************************
+2026-10-08 18:24:19,595 [root INFO] - MEDIA MESSAGE → Posting to Instagram + Facebook + Threads + WhatsApp Groups
+2026-10-08 18:24:19,595 [root INFO] - **************************************************
+2026-10-08 18:24:19,595 [meta_publisher INFO] - Initiating Instagram Story publication...
+2026-10-08 18:24:28,282 [meta_publisher INFO] - Created IG Story container: 18121681202291837. Waiting for processing...
+2026-10-08 18:24:28,282 [meta_publisher INFO] - Checking container 18121681202291837 status (attempt 1/15)...
+2026-10-08 18:24:29,178 [meta_publisher INFO] - Container 18121681202291837 status: IN_PROGRESS
+2026-10-08 18:24:34,179 [meta_publisher INFO] - Checking container 18121681202291837 status (attempt 2/15)...
+2026-10-08 18:24:34,803 [meta_publisher INFO] - Container 18121681202291837 status: FINISHED
+2026-10-08 18:24:38,774 [meta_publisher INFO] - Successfully published IG Story. Post ID: 17992969029108863
+2026-10-08 18:24:38,776 [meta_publisher INFO] - Initiating Facebook Page Story publication...
+2026-10-08 18:24:39,232 [meta_publisher ERROR] - Facebook Page Story publication failed: Failed to upload FB Page temporary photo: {'error': {'message': '(#200) Unpublished posts must be posted to a page as the page itself.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AAlnxsK4WYlbz2cLJ12x9uM'}}
+2026-10-08 18:24:39,232 [meta_publisher INFO] - Initiating Threads publication...
+2026-10-08 18:24:43,969 [meta_publisher INFO] - Created Threads container: 18158860987524520. Waiting for processing...
+2026-10-08 18:24:43,970 [meta_publisher INFO] - Checking container 18158860987524520 status (attempt 1/15)...
+2026-10-08 18:24:44,469 [meta_publisher INFO] - Container 18158860987524520 status: FINISHED
+2026-10-08 18:24:47,177 [meta_publisher INFO] - Successfully published to Threads. Post ID: 18031010639884238
+2026-10-08 18:24:47,180 [root INFO] - Forwarding media to WhatsApp Group: 6282111741856-1563103425@g.us (Type: image)
+2026-10-08 18:24:50,892 [root INFO] - Dissemination Complete. Results (Meta): {'instagram': {'success': True, 'id': '17992969029108863'}, 'facebook': {'success': False, 'error': "Failed to upload FB Page temporary photo: {'error': {'message': '(#200) Unpublished posts must be posted to a page as the page itself.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AAlnxsK4WYlbz2cLJ12x9uM'}}"}, 'threads': {'success': True, 'id': '18031010639884238'}}, WA Group: True
+2026-10-08 18:24:50,892 [root INFO] - **************************************************
+2026-10-08 18:24:51,654 [root INFO] - 📊 Monitoring log saved → Stamet Oesman Sadik (46175226957895:98)
+2026-10-08 18:24:51,658 [root INFO] - Deleted local file: downloads\processed_chat_3EB083474DF98D26ECC41E.jpg
+2026-10-08 18:24:51,659 [root INFO] - Deleted local file: downloads\chat_3EB083474DF98D26ECC41E.jpg
+2026-10-09 02:03:05,908 [root INFO] - --------------------------------------------------
+2026-10-09 02:03:05,909 [root INFO] - 💬 NEW DIRECT CHAT MESSAGE RECEIVED
+2026-10-09 02:03:05,909 [root INFO] - From (Name):  Stamet Oesman Sadik
+2026-10-09 02:03:05,909 [root INFO] - From (JID):   46175226957895:93
+2026-10-09 02:03:05,910 [root INFO] - Time:         2026-10-09 02:03:05
+2026-10-09 02:03:05,910 [root INFO] - Text Content: [No Text]
+2026-10-09 02:03:05,910 [root INFO] - Attachment:   (image) [Downloading...]
+2026-10-09 02:03:06,471 [root INFO] - Saved media to: downloads\chat_3EB0A754CE410ED410C749.jpg
+2026-10-09 02:03:06,472 [root INFO] - --------------------------------------------------
+2026-10-09 02:03:06,491 [supabase_uploader INFO] - Initialized Supabase client targeting bucket: 'disseminator-media'
+2026-10-09 02:03:06,491 [root INFO] - Preparing image for Stories (auto-conversion & 9:16 padding)...
+2026-10-09 02:03:06,492 [media_processor INFO] - Processing image for Story API compatibility: downloads\chat_3EB0A754CE410ED410C749.jpg
+2026-10-09 02:03:06,499 [media_processor INFO] - Resizing/Padding from (637x998) to target 9:16 (637x1132)
+2026-10-09 02:03:06,508 [media_processor INFO] - Processed image saved to: downloads\processed_chat_3EB0A754CE410ED410C749.jpg
+2026-10-09 02:03:06,508 [root INFO] - Uploading processed story image to Supabase...
+2026-10-09 02:03:06,509 [supabase_uploader INFO] - Uploading file 'downloads\processed_chat_3EB0A754CE410ED410C749.jpg' to remote path 'stories/20261009_020306_processed_chat_3EB0A754CE410ED410C749.jpg' (Type: image/jpeg)...
+2026-10-09 02:03:07,477 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/stories/20261009_020306_processed_chat_3EB0A754CE410ED410C749.jpg "HTTP/2 200 OK"
+2026-10-09 02:03:07,478 [supabase_uploader INFO] - Successfully uploaded: stories/20261009_020306_processed_chat_3EB0A754CE410ED410C749.jpg
+2026-10-09 02:03:07,478 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/stories/20261009_020306_processed_chat_3EB0A754CE410ED410C749.jpg
+2026-10-09 02:03:07,478 [root INFO] - Uploading original image to Supabase...
+2026-10-09 02:03:07,479 [supabase_uploader INFO] - Uploading file 'downloads\chat_3EB0A754CE410ED410C749.jpg' to remote path 'originals/20261009_020306_chat_3EB0A754CE410ED410C749.jpg' (Type: image/jpeg)...
+2026-10-09 02:03:07,789 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/originals/20261009_020306_chat_3EB0A754CE410ED410C749.jpg "HTTP/2 200 OK"
+2026-10-09 02:03:07,790 [supabase_uploader INFO] - Successfully uploaded: originals/20261009_020306_chat_3EB0A754CE410ED410C749.jpg
+2026-10-09 02:03:07,790 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/originals/20261009_020306_chat_3EB0A754CE410ED410C749.jpg
+2026-10-09 02:03:07,790 [root INFO] - **************************************************
+2026-10-09 02:03:07,791 [root INFO] - MEDIA MESSAGE → Posting to Instagram + Facebook + Threads + WhatsApp Groups
+2026-10-09 02:03:07,791 [root INFO] - **************************************************
+2026-10-09 02:03:07,791 [meta_publisher INFO] - Initiating Instagram Story publication...
+2026-10-09 02:03:16,156 [meta_publisher INFO] - Created IG Story container: 18121726397291837. Waiting for processing...
+2026-10-09 02:03:16,156 [meta_publisher INFO] - Checking container 18121726397291837 status (attempt 1/15)...
+2026-10-09 02:03:16,887 [meta_publisher INFO] - Container 18121726397291837 status: IN_PROGRESS
+2026-10-09 02:03:21,889 [meta_publisher INFO] - Checking container 18121726397291837 status (attempt 2/15)...
+2026-10-09 02:03:22,506 [meta_publisher INFO] - Container 18121726397291837 status: FINISHED
+2026-10-09 02:03:26,580 [meta_publisher INFO] - Successfully published IG Story. Post ID: 18139359646616556
+2026-10-09 02:03:26,586 [meta_publisher INFO] - Initiating Facebook Page Story publication...
+2026-10-09 02:03:27,025 [meta_publisher ERROR] - Facebook Page Story publication failed: Failed to upload FB Page temporary photo: {'error': {'message': '(#200) Unpublished posts must be posted to a page as the page itself.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AJOM8XyolKAuXUO8i_Yyo0s'}}
+2026-10-09 02:03:27,026 [meta_publisher INFO] - Initiating Threads publication...
+2026-10-09 02:03:31,751 [meta_publisher INFO] - Created Threads container: 18158936821524520. Waiting for processing...
+2026-10-09 02:03:31,751 [meta_publisher INFO] - Checking container 18158936821524520 status (attempt 1/15)...
+2026-10-09 02:03:32,447 [meta_publisher INFO] - Container 18158936821524520 status: IN_PROGRESS
+2026-10-09 02:03:37,448 [meta_publisher INFO] - Checking container 18158936821524520 status (attempt 2/15)...
+2026-10-09 02:03:38,033 [meta_publisher INFO] - Container 18158936821524520 status: FINISHED
+2026-10-09 02:03:41,393 [meta_publisher INFO] - Successfully published to Threads. Post ID: 17987606913116274
+2026-10-09 02:03:41,397 [root INFO] - Forwarding media to WhatsApp Group: 6282111741856-1563103425@g.us (Type: image)
+2026-10-09 02:03:44,276 [root INFO] - Dissemination Complete. Results (Meta): {'instagram': {'success': True, 'id': '18139359646616556'}, 'facebook': {'success': False, 'error': "Failed to upload FB Page temporary photo: {'error': {'message': '(#200) Unpublished posts must be posted to a page as the page itself.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AJOM8XyolKAuXUO8i_Yyo0s'}}"}, 'threads': {'success': True, 'id': '17987606913116274'}}, WA Group: True
+2026-10-09 02:03:44,279 [root INFO] - **************************************************
+2026-10-09 02:03:45,028 [root INFO] - 📊 Monitoring log saved → Stamet Oesman Sadik (46175226957895:93)
+2026-10-09 02:03:45,029 [root INFO] - Deleted local file: downloads\processed_chat_3EB0A754CE410ED410C749.jpg
+2026-10-09 02:03:45,030 [root INFO] - Deleted local file: downloads\chat_3EB0A754CE410ED410C749.jpg
+2026-10-09 05:26:03,812 [whatsmeow.Client WARNING] - Received stream end frame
+2026-10-09 05:26:03,814 [whatsmeow.Client WARNING] - Got 503 stream error, assuming automatic reconnect will handle it
+2026-10-09 05:26:03,954 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: EOF
+2026-10-09 05:26:03,955 [root WARNING] - Disconnected from WhatsApp. Exiting to trigger auto-restart...
+2026-10-09 05:26:05,419 [whatsmeow.Client INFO] - Successfully authenticated
+2026-10-09 05:26:06,060 [root INFO] - Successfully connected to WhatsApp as: 6283113114413:1@s.whatsapp.net (Name: SIMPAN MKG HALSEL)
+2026-10-09 06:40:18,268 [whatsmeow.Client WARNING] - Received stream end frame
+2026-10-09 06:40:18,269 [whatsmeow.Client WARNING] - Got 503 stream error, assuming automatic reconnect will handle it
+2026-10-09 06:40:18,379 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: EOF
+2026-10-09 06:40:18,380 [root WARNING] - Disconnected from WhatsApp. Exiting to trigger auto-restart...
+2026-10-09 06:40:20,349 [whatsmeow.Client INFO] - Successfully authenticated
+2026-10-09 06:40:20,978 [root INFO] - Successfully connected to WhatsApp as: 6283113114413:1@s.whatsapp.net (Name: SIMPAN MKG HALSEL)
+2026-10-09 06:57:31,480 [whatsmeow.Client WARNING] - Received stream end frame
+2026-10-09 06:57:31,482 [whatsmeow.Client WARNING] - Got 503 stream error, assuming automatic reconnect will handle it
+2026-10-09 06:57:31,642 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: EOF
+2026-10-09 06:57:31,642 [root WARNING] - Disconnected from WhatsApp. Exiting to trigger auto-restart...
+2026-10-09 06:57:33,022 [whatsmeow.Client INFO] - Successfully authenticated
+2026-10-09 06:57:33,687 [root INFO] - Successfully connected to WhatsApp as: 6283113114413:1@s.whatsapp.net (Name: SIMPAN MKG HALSEL)
+2026-10-09 07:20:21,560 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: EOF
+2026-10-09 07:20:21,561 [root WARNING] - Disconnected from WhatsApp. Exiting to trigger auto-restart...
+2026-10-09 07:20:22,573 [whatsmeow.Client INFO] - Successfully authenticated
+2026-10-09 07:20:23,177 [root INFO] - Successfully connected to WhatsApp as: 6283113114413:1@s.whatsapp.net (Name: SIMPAN MKG HALSEL)
+2026-10-09 07:48:48,929 [root INFO] - --------------------------------------------------
+2026-10-09 07:48:48,930 [root INFO] - 💬 NEW DIRECT CHAT MESSAGE RECEIVED
+2026-10-09 07:48:48,930 [root INFO] - From (Name):  Stamet Oesman Sadik
+2026-10-09 07:48:48,930 [root INFO] - From (JID):   46175226957895:98
+2026-10-09 07:48:48,930 [root INFO] - Time:         2026-10-09 07:48:48
+2026-10-09 07:48:48,930 [root INFO] - Text Content: Assalamualaikum,
+Selamat pagi,
+Berikut kami sampaikan prospek cuaca wilayah Kabupaten Halmahera Selatan untuk satu pekan kedepan tanggal *09 - 15 Oktober 2026*
+Terima kasih 🙏🏼
+2026-10-09 07:48:48,931 [root INFO] - Attachment:   (image) [Downloading...]
+2026-10-09 07:48:49,727 [root INFO] - Saved media to: downloads\chat_3EB0D6F3212B04FB21BBA2.jpg
+2026-10-09 07:48:49,727 [root INFO] - --------------------------------------------------
+2026-10-09 07:48:49,748 [supabase_uploader INFO] - Initialized Supabase client targeting bucket: 'disseminator-media'
+2026-10-09 07:48:49,749 [root INFO] - Preparing image for Stories (auto-conversion & 9:16 padding)...
+2026-10-09 07:48:49,749 [media_processor INFO] - Processing image for Story API compatibility: downloads\chat_3EB0D6F3212B04FB21BBA2.jpg
+2026-10-09 07:48:49,755 [media_processor INFO] - Resizing/Padding from (996x1600) to target 9:16 (996x1770)
+2026-10-09 07:48:49,771 [media_processor INFO] - Processed image saved to: downloads\processed_chat_3EB0D6F3212B04FB21BBA2.jpg
+2026-10-09 07:48:49,773 [root INFO] - Uploading processed story image to Supabase...
+2026-10-09 07:48:49,773 [supabase_uploader INFO] - Uploading file 'downloads\processed_chat_3EB0D6F3212B04FB21BBA2.jpg' to remote path 'stories/20261009_074849_processed_chat_3EB0D6F3212B04FB21BBA2.jpg' (Type: image/jpeg)...
+2026-10-09 07:48:50,854 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/stories/20261009_074849_processed_chat_3EB0D6F3212B04FB21BBA2.jpg "HTTP/2 200 OK"
+2026-10-09 07:48:50,855 [supabase_uploader INFO] - Successfully uploaded: stories/20261009_074849_processed_chat_3EB0D6F3212B04FB21BBA2.jpg
+2026-10-09 07:48:50,855 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/stories/20261009_074849_processed_chat_3EB0D6F3212B04FB21BBA2.jpg
+2026-10-09 07:48:50,856 [root INFO] - Uploading original image to Supabase...
+2026-10-09 07:48:50,856 [supabase_uploader INFO] - Uploading file 'downloads\chat_3EB0D6F3212B04FB21BBA2.jpg' to remote path 'originals/20261009_074849_chat_3EB0D6F3212B04FB21BBA2.jpg' (Type: image/jpeg)...
+2026-10-09 07:48:51,254 [httpx INFO] - HTTP Request: POST https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/disseminator-media/originals/20261009_074849_chat_3EB0D6F3212B04FB21BBA2.jpg "HTTP/2 200 OK"
+2026-10-09 07:48:51,255 [supabase_uploader INFO] - Successfully uploaded: originals/20261009_074849_chat_3EB0D6F3212B04FB21BBA2.jpg
+2026-10-09 07:48:51,256 [supabase_uploader INFO] - Generated public URL: https://mnflwzbkprudzhytptao.supabase.co/storage/v1/object/public/disseminator-media/originals/20261009_074849_chat_3EB0D6F3212B04FB21BBA2.jpg
+2026-10-09 07:48:51,256 [root INFO] - **************************************************
+2026-10-09 07:48:51,257 [root INFO] - MEDIA MESSAGE → Posting to Instagram + Facebook + Threads + WhatsApp Groups
+2026-10-09 07:48:51,257 [root INFO] - **************************************************
+2026-10-09 07:48:51,258 [meta_publisher INFO] - Initiating Instagram Story publication...
+2026-10-09 07:48:59,427 [meta_publisher INFO] - Created IG Story container: 18121752566291837. Waiting for processing...
+2026-10-09 07:48:59,428 [meta_publisher INFO] - Checking container 18121752566291837 status (attempt 1/15)...
+2026-10-09 07:49:00,078 [meta_publisher INFO] - Container 18121752566291837 status: IN_PROGRESS
+2026-10-09 07:49:05,079 [meta_publisher INFO] - Checking container 18121752566291837 status (attempt 2/15)...
+2026-10-09 07:49:05,644 [meta_publisher INFO] - Container 18121752566291837 status: FINISHED
+2026-10-09 07:49:09,684 [meta_publisher INFO] - Successfully published IG Story. Post ID: 17960192082228060
+2026-10-09 07:49:09,687 [meta_publisher INFO] - Initiating Facebook Page Story publication...
+2026-10-09 07:49:10,166 [meta_publisher ERROR] - Facebook Page Story publication failed: Failed to upload FB Page temporary photo: {'error': {'message': '(#200) Unpublished posts must be posted to a page as the page itself.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A17BZAgtdB4qgbiVbkv1ve8'}}
+2026-10-09 07:49:10,167 [meta_publisher INFO] - Initiating Threads publication...
+2026-10-09 07:49:15,070 [meta_publisher INFO] - Created Threads container: 18158980351524520. Waiting for processing...
+2026-10-09 07:49:15,070 [meta_publisher INFO] - Checking container 18158980351524520 status (attempt 1/15)...
+2026-10-09 07:49:15,492 [meta_publisher INFO] - Container 18158980351524520 status: IN_PROGRESS
+2026-10-09 07:49:20,493 [meta_publisher INFO] - Checking container 18158980351524520 status (attempt 2/15)...
+2026-10-09 07:49:20,916 [meta_publisher INFO] - Container 18158980351524520 status: FINISHED
+2026-10-09 07:49:24,172 [meta_publisher INFO] - Successfully published to Threads. Post ID: 18101993291141186
+2026-10-09 07:49:24,177 [root INFO] - Forwarding media to WhatsApp Group: 6282111741856-1563103425@g.us (Type: image)
+2026-10-09 07:49:26,453 [root INFO] - Dissemination Complete. Results (Meta): {'instagram': {'success': True, 'id': '17960192082228060'}, 'facebook': {'success': False, 'error': "Failed to upload FB Page temporary photo: {'error': {'message': '(#200) Unpublished posts must be posted to a page as the page itself.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A17BZAgtdB4qgbiVbkv1ve8'}}"}, 'threads': {'success': True, 'id': '18101993291141186'}}, WA Group: True
+2026-10-09 07:49:26,453 [root INFO] - **************************************************
+2026-10-09 07:49:27,151 [root INFO] - 📊 Monitoring log saved → Stamet Oesman Sadik (46175226957895:98)
+2026-10-09 07:49:27,152 [root INFO] - Deleted local file: downloads\processed_chat_3EB0D6F3212B04FB21BBA2.jpg
+2026-10-09 07:49:27,152 [root INFO] - Deleted local file: downloads\chat_3EB0D6F3212B04FB21BBA2.jpg
+2026-10-09 07:50:28,098 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: EOF
+2026-10-09 07:50:28,099 [root WARNING] - Disconnected from WhatsApp. Exiting to trigger auto-restart...
+2026-10-09 07:50:29,029 [whatsmeow.Client INFO] - Successfully authenticated
+2026-10-09 07:50:29,522 [root INFO] - Successfully connected to WhatsApp as: 6283113114413:1@s.whatsapp.net (Name: SIMPAN MKG HALSEL)
+2026-10-09 09:06:54,674 [root INFO] - --------------------------------------------------
+2026-10-09 09:06:54,676 [root INFO] - 💬 NEW GROUP MESSAGE RECEIVED
+2026-10-09 09:06:54,676 [root INFO] - From (Name):  Stamet Oesman Sadik
+2026-10-09 09:06:54,676 [root INFO] - From (JID):   6285280599185
+2026-10-09 09:06:54,676 [root INFO] - Group ID:     status@broadcast
+2026-10-09 09:06:54,676 [root INFO] - Time:         2026-10-09 09:06:53
+2026-10-09 09:06:54,676 [root INFO] - Text Content: [No Text]
+2026-10-09 09:06:54,676 [root INFO] - --------------------------------------------------
+2026-10-09 09:06:54,677 [root INFO] - Skipping dissemination: Message is not from a personal/direct chat (group or channel ignored).
+2026-10-09 09:06:54,679 [root INFO] - --------------------------------------------------
+2026-10-09 09:06:54,679 [root INFO] - 💬 NEW GROUP MESSAGE RECEIVED
+2026-10-09 09:06:54,679 [root INFO] - From (Name):  Stamet Oesman Sadik
+2026-10-09 09:06:54,679 [root INFO] - From (JID):   6285280599185
+2026-10-09 09:06:54,679 [root INFO] - Group ID:     status@broadcast
+2026-10-09 09:06:54,680 [root INFO] - Time:         2026-10-09 09:06:53
+2026-10-09 09:06:54,680 [root INFO] - Text Content: [INNOVATION SHARING: UNTUK INSAN BMKG]   
+
+_Memikat hati si Batu Bacan,_
+_Indah berkilau di Selatan Halmahera._
+_Langkah inovasi kita rekatkan,_  
+_BMKG selalu handal dan terpercaya._
+
+
+Stasiun Meteorologi Oesman Sadik Halmahera Selatan mengundang sobat BMKG, khususnya di lingkungan BBMKG Wilayah IV Makassar untuk bergabung dalam Sosialisasi Inovasi Operasional:   
+
+✨ Inovasi yang Dipaparkan:
+
+1. SI-REKAP – Sistem Rekapitulasi Data & Laporan Bulanan Operasional Terintegrasi Jadwal Shift (Oleh: Kurniawan Eko Putra, S.Tr.Inst)   
+2. SIMPAN MKG – Sistem Informasi Multi Platform Automatic Notification MKG (Oleh: Irsyad Humaidi, S.Tr.Met)   
+
+🗓 Jadwal Pelaksanaan:
+
+• Hari/Tanggal: Selasa, 13 Oktober 2026
+• Waktu: 10.00 WIT – Selesai
+• Platform: Zoom Meeting   
+
+Sampai jumpa di ruang virtual, Sobat BMKG!   
+
+#BMKG #InsanBMKG #BBMKGWilayah4 #StametOesmanSadik #HalmaheraSelatan #InovasiBMKG
+2026-10-09 09:06:54,681 [root INFO] - Attachment:   (image) [Downloading...]
+2026-10-09 09:06:55,295 [root INFO] - Saved media to: downloads\chat_AC701DAF766E3A4AFF8AD8F523554E5B.jpg
+2026-10-09 09:06:55,295 [root INFO] - --------------------------------------------------
+2026-10-09 09:06:55,295 [root INFO] - Skipping dissemination: Message is not from a personal/direct chat (group or channel ignored).
+2026-10-09 10:55:44,404 [whatsmeow.Client WARNING] - Keepalive timed out
+2026-10-09 10:55:53,623 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: read tcp 172.21.101.100:65259->157.240.13.54:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2026-10-09 10:55:53,625 [root WARNING] - Disconnected from WhatsApp. Exiting to trigger auto-restart...
+2026-10-09 10:55:58,011 [whatsmeow.Client INFO] - Successfully authenticated
+2026-10-09 10:55:59,644 [root INFO] - Successfully connected to WhatsApp as: 6283113114413:1@s.whatsapp.net (Name: SIMPAN MKG HALSEL)
+2026-10-09 10:59:14,110 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:14,110 [root INFO] - 💬 NEW GROUP MESSAGE RECEIVED
+2026-10-09 10:59:14,110 [root INFO] - From (Name):  Stasiun Geofisika Ternate
+2026-10-09 10:59:14,111 [root INFO] - From (JID):   24576473960680:10
+2026-10-09 10:59:14,111 [root INFO] - Group ID:     6282111741856-1563103425@g.us
+2026-10-09 10:59:14,111 [root INFO] - Time:         2026-10-09 10:59:12
+2026-10-09 10:59:14,111 [root INFO] - Text Content: [No Text]
+2026-10-09 10:59:14,111 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:14,111 [root INFO] - Skipping dissemination: Message is not from a personal/direct chat (group or channel ignored).
+2026-10-09 10:59:14,113 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:14,114 [root INFO] - 💬 NEW GROUP MESSAGE RECEIVED
+2026-10-09 10:59:14,114 [root INFO] - From (Name):  Stasiun Geofisika Ternate
+2026-10-09 10:59:14,114 [root INFO] - From (JID):   24576473960680:10
+2026-10-09 10:59:14,115 [root INFO] - Group ID:     6282111741856-1563103425@g.us
+2026-10-09 10:59:14,115 [root INFO] - Time:         2026-10-09 10:59:12
+2026-10-09 10:59:14,115 [root INFO] - Text Content: Assalamu'alaikum Warahmatullahi Wabarakatuh
+
+Hai Sobat BMKG,
+Kami sampaikan informasi terbaru sebagai berikut:
+
+* Infografis Seismisitas Maluku Utara untuk periode 2-8 Oktober 2026.
+* Infografis Petir di Kota Ternate dan sekitarnya untuk periode 2-8 Oktober 2026.
+* Infografis aktivitas magnet bumi (Indeks K dan Indeks A) untuk periode 2-8 Oktober 2026.
+* Infografis Jadwal Terbit-Terbenam Matahari untuk Kota dan Kabupaten di Maluku Utara pada periode 10-16 Oktober 2026.
+
+Semoga informasi ini bermanfaat. Tetap jaga kesehatan.
+
+Jika Anda memiliki pertanyaan atau saran, silakan hubungi kami di:
+Stasiun Geofisika Ternate
+Alamat: Jl. Bali Bunga, Kel. Tabona, Kec. Ternate Selatan, Kota Ternate, 97713
+Telepon/WhatsApp: 0815-9966-108
+2026-10-09 10:59:14,115 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:14,116 [root INFO] - Skipping dissemination: Message is not from a personal/direct chat (group or channel ignored).
+2026-10-09 10:59:15,731 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:15,731 [root INFO] - 💬 NEW GROUP MESSAGE RECEIVED
+2026-10-09 10:59:15,732 [root INFO] - From (Name):  Stasiun Geofisika Ternate
+2026-10-09 10:59:15,732 [root INFO] - From (JID):   24576473960680:10
+2026-10-09 10:59:15,732 [root INFO] - Group ID:     6282111741856-1563103425@g.us
+2026-10-09 10:59:15,732 [root INFO] - Time:         2026-10-09 10:59:14
+2026-10-09 10:59:15,732 [root INFO] - Text Content: [No Text]
+2026-10-09 10:59:15,732 [root INFO] - Attachment:   (image) [Downloading...]
+2026-10-09 10:59:19,729 [root INFO] - Saved media to: downloads\chat_3EB0923EAF50C4FC84EA19.jpg
+2026-10-09 10:59:19,729 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:19,729 [root INFO] - Skipping dissemination: Message is not from a personal/direct chat (group or channel ignored).
+2026-10-09 10:59:19,731 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:19,731 [root INFO] - 💬 NEW GROUP MESSAGE RECEIVED
+2026-10-09 10:59:19,731 [root INFO] - From (Name):  Stasiun Geofisika Ternate
+2026-10-09 10:59:19,731 [root INFO] - From (JID):   24576473960680:10
+2026-10-09 10:59:19,731 [root INFO] - Group ID:     6282111741856-1563103425@g.us
+2026-10-09 10:59:19,731 [root INFO] - Time:         2026-10-09 10:59:15
+2026-10-09 10:59:19,732 [root INFO] - Text Content: [No Text]
+2026-10-09 10:59:19,732 [root INFO] - Attachment:   (image) [Downloading...]
+2026-10-09 10:59:21,004 [root INFO] - Saved media to: downloads\chat_3EB0C1C3C864D2B2CFCB74.jpg
+2026-10-09 10:59:21,004 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:21,005 [root INFO] - Skipping dissemination: Message is not from a personal/direct chat (group or channel ignored).
+2026-10-09 10:59:21,006 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:21,006 [root INFO] - 💬 NEW GROUP MESSAGE RECEIVED
+2026-10-09 10:59:21,006 [root INFO] - From (Name):  Stasiun Geofisika Ternate
+2026-10-09 10:59:21,006 [root INFO] - From (JID):   24576473960680:10
+2026-10-09 10:59:21,007 [root INFO] - Group ID:     6282111741856-1563103425@g.us
+2026-10-09 10:59:21,007 [root INFO] - Time:         2026-10-09 10:59:17
+2026-10-09 10:59:21,007 [root INFO] - Text Content: [No Text]
+2026-10-09 10:59:21,007 [root INFO] - Attachment:   (image) [Downloading...]
+2026-10-09 10:59:22,093 [root INFO] - Saved media to: downloads\chat_3EB06458D068E5552B26C9.jpg
+2026-10-09 10:59:22,093 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:22,093 [root INFO] - Skipping dissemination: Message is not from a personal/direct chat (group or channel ignored).
+2026-10-09 10:59:22,095 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:22,095 [root INFO] - 💬 NEW GROUP MESSAGE RECEIVED
+2026-10-09 10:59:22,095 [root INFO] - From (Name):  Stasiun Geofisika Ternate
+2026-10-09 10:59:22,095 [root INFO] - From (JID):   24576473960680:10
+2026-10-09 10:59:22,095 [root INFO] - Group ID:     6282111741856-1563103425@g.us
+2026-10-09 10:59:22,095 [root INFO] - Time:         2026-10-09 10:59:18
+2026-10-09 10:59:22,095 [root INFO] - Text Content: [No Text]
+2026-10-09 10:59:22,095 [root INFO] - Attachment:   (image) [Downloading...]
+2026-10-09 10:59:23,380 [root INFO] - Saved media to: downloads\chat_3EB02DB5270CF4437BBC69.jpg
+2026-10-09 10:59:23,380 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:23,380 [root INFO] - Skipping dissemination: Message is not from a personal/direct chat (group or channel ignored).
+2026-10-09 10:59:23,382 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:23,382 [root INFO] - 💬 NEW GROUP MESSAGE RECEIVED
+2026-10-09 10:59:23,382 [root INFO] - From (Name):  Stasiun Geofisika Ternate
+2026-10-09 10:59:23,383 [root INFO] - From (JID):   24576473960680:10
+2026-10-09 10:59:23,383 [root INFO] - Group ID:     6282111741856-1563103425@g.us
+2026-10-09 10:59:23,383 [root INFO] - Time:         2026-10-09 10:59:19
+2026-10-09 10:59:23,383 [root INFO] - Text Content: [No Text]
+2026-10-09 10:59:23,383 [root INFO] - Attachment:   (image) [Downloading...]
+2026-10-09 10:59:24,681 [root INFO] - Saved media to: downloads\chat_3EB08EE2D5A718C4209474.jpg
+2026-10-09 10:59:24,681 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:24,681 [root INFO] - Skipping dissemination: Message is not from a personal/direct chat (group or channel ignored).
+2026-10-09 10:59:24,682 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:24,682 [root INFO] - 💬 NEW GROUP MESSAGE RECEIVED
+2026-10-09 10:59:24,683 [root INFO] - From (Name):  Stasiun Geofisika Ternate
+2026-10-09 10:59:24,683 [root INFO] - From (JID):   24576473960680:10
+2026-10-09 10:59:24,683 [root INFO] - Group ID:     6282111741856-1563103425@g.us
+2026-10-09 10:59:24,683 [root INFO] - Time:         2026-10-09 10:59:21
+2026-10-09 10:59:24,683 [root INFO] - Text Content: [No Text]
+2026-10-09 10:59:24,683 [root INFO] - Attachment:   (image) [Downloading...]
+2026-10-09 10:59:26,081 [root INFO] - Saved media to: downloads\chat_3EB030A378305EDBD5AA5F.jpg
+2026-10-09 10:59:26,082 [root INFO] - --------------------------------------------------
+2026-10-09 10:59:26,082 [root INFO] - Skipping dissemination: Message is not from a personal/direct chat (group or channel ignored).
+2026-10-09 11:12:39,080 [whatsmeow.Client WARNING] - Keepalive timed out
+2026-10-09 11:12:48,282 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: read tcp 172.21.101.100:58330->57.144.101.32:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2026-10-09 11:12:48,283 [root WARNING] - Disconnected from WhatsApp. Exiting to trigger auto-restart...
+2026-10-09 11:12:49,525 [whatsmeow.Client INFO] - Successfully authenticated
+2026-10-09 11:12:50,174 [root INFO] - Successfully connected to WhatsApp as: 6283113114413:1@s.whatsapp.net (Name: SIMPAN MKG HALSEL)
+2026-10-09 11:14:20,347 [whatsmeow.Client WARNING] - Keepalive timed out
+2026-10-09 11:14:29,569 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: read tcp 172.21.101.100:58440->157.240.13.54:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2026-10-09 11:14:29,571 [root WARNING] - Disconnected from WhatsApp. Exiting to trigger auto-restart...
+2026-10-09 11:14:34,022 [whatsmeow.Client ERROR] - Error reconnecting after autoreconnect sleep: failed to dial whatsapp web websocket: failed to WebSocket dial: failed to send handshake request: Get "https://web.whatsapp.com/ws/chat": dial tcp: lookup web.whatsapp.com: no such host
+2026-10-09 11:14:40,649 [whatsmeow.Client INFO] - Successfully authenticated
+2026-10-09 11:14:42,329 [root INFO] - Successfully connected to WhatsApp as: 6283113114413:1@s.whatsapp.net (Name: SIMPAN MKG HALSEL)
+2026-10-09 11:21:10,106 [whatsmeow.Client WARNING] - Keepalive timed out
+2026-10-09 11:21:27,548 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: read tcp 172.21.101.100:58984->57.144.101.32:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2026-10-09 11:21:27,549 [root WARNING] - Disconnected from WhatsApp. Exiting to trigger auto-restart...
+2026-10-09 11:21:31,917 [whatsmeow.Client INFO] - Successfully authenticated
+2026-10-09 11:21:33,663 [root INFO] - Successfully connected to WhatsApp as: 6283113114413:1@s.whatsapp.net (Name: SIMPAN MKG HALSEL)
+2026-10-09 11:22:09,537 [whatsmeow.Client WARNING] - Keepalive timed out
+2026-10-09 14:23:45,653 [whatsmeow.Client WARNING] - Keepalive timed out
+2026-10-09 14:23:54,868 [whatsmeow.Client.Socket ERROR] - Error reading from websocket: failed to get reader: failed to read frame header: read tcp 172.21.101.100:57387->57.144.101.32:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2026-10-09 14:23:54,870 [root WARNING] - Disconnected from WhatsApp. Exiting to trigger auto-restart...
+2026-10-09 14:23:56,160 [whatsmeow.Client INFO] - Successfully authenticated
+2026-10-09 14:23:56,799 [root INFO] - Successfully connected to WhatsApp as: 6283113114413:1@s.whatsapp.net (Name: SIMPAN MKG HALSEL)
